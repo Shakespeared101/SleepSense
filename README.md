@@ -92,13 +92,7 @@ Ensure you have the following installed:
    ```
 
 2. **Install Dependencies**  
-   Create a virtual environment and install required packages:  
-   ```bash
-   python -m venv env
-   source env/bin/activate   # For Linux/macOS
-   env\Scriptsctivate      # For Windows
-   pip install -r requirements.txt
-   ```
+   Create a virtual environment and install required packages
 
 3. **Migrate the Database**  
    ```bash
@@ -115,10 +109,6 @@ Ensure you have the following installed:
    ```
 
 6. **Access the Application**  
-   Open your browser and navigate to:  
-   ```
-   http://127.0.0.1:8000/
-   ```
 
 ---
 
@@ -135,19 +125,6 @@ Ensure you have the following installed:
 
 4. **Monitor Records**  
    All submitted data is stored and can be analyzed for trends.  
-
----
-
-## Screenshots  
-
-### 1. Startup Page  
-A welcoming interface with a modern design for easy navigation.  
-
-### 2. User Input Page  
-A simple form to input sleep parameters.  
-
-### 3. Results Page  
-Displays the prediction (Stressed/Not Stressed) with actionable tips.  
 
 ---
 
@@ -174,5 +151,5 @@ Feel free to contribute to this project by submitting issues or pull requests!
 ## Contact  
 
 For any inquiries, reach out to:  
-- **Email**: yourname@example.com  
-- **GitHub**: [yourusername](https://github.com/yourusername)  
+- **Email**: shakthi3203@gmail.com 
+- **GitHub**: [Shakespeared101](https://github.com/Shakespeared101)  
