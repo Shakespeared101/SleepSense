@@ -29,20 +29,6 @@
 
 ---
 
-## ANN Model Design  
-
-- **Input Layer**: Processes 8 input features (sleep-related parameters).  
-- **Hidden Layers**:  
-  - First Layer: 64 neurons, ReLU activation.  
-  - Second Layer: 32 neurons, ReLU activation.  
-- **Output Layer**:  
-  - 1 neuron, sigmoid activation for binary classification.  
-- **Optimizer**: Adam  
-- **Loss Function**: Binary cross-entropy.  
-- **Training Accuracy**: Achieved 100% accuracy on test data.  
-
----
-
 ## Technologies Used  
 
 1. **Frontend**:  
