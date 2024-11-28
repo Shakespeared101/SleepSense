@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulseSense - Enter Sleep Data</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Enter Your Sleep Data</h1>
+    </header>
+    <form method="post">
+        {% csrf_token %}
+        <label for="heart_rate">Heart Rate (BPM):</label>
+        <input type="number" name="heart_rate" required>
+
+        <label for="body_movements">Body Movements:</label>
+        <input type="number" name="body_movements" required>
+
+        <label for="respiratory_rate">Respiratory Rate (Breaths/min):</label>
+        <input type="number" name="respiratory_rate" required>
+
+        <label for="eeg_data">EEG Data:</label>
+        <input type="number" name="eeg_data" required>
+
+        <label for="sleeping_hours">Sleeping Hours:</label>
+        <input type="number" name="sleeping_hours" required>
+
+        <label for="blood_oxygen_level">Blood Oxygen Level (%):</label>
+        <input type="number" name="blood_oxygen_level" required>
+
+        <label for="snoring_rate">Snoring Rate:</label>
+        <input type="number" name="snoring_rate" required>
+
+        <label for="limb_movement_rate">Limb Movement Rate:</label>
+        <input type="number" name="limb_movement_rate" required>
+
+        <button type="submit">Predict Stress Level</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulseSense - Stress Detection</title>
+    <!-- Google Fonts for unique fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="main-container">
+        <div class="content-box">
+            <header>
+                <h1>Welcome to <span class="brand-name">PulseSense</span></h1>
+                <p class="subtitle">Your Personal Stress Detector Using Sleep Data</p>
+                <p class="description">
+                    Discover how your sleep affects your stress levels. Join us today and take control of your mental health with our advanced detection system.
+                </p>
+            </header>
+
+            <!-- Centered box with Sign Up and Log In options -->
+            <div class="login-signup-buttons">
+                <a href="{% url 'signup' %}" class="btn primary-btn">Sign Up</a>
+                <a href="{% url 'login' %}" class="btn secondary-btn">Log In</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 PulseSense. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
