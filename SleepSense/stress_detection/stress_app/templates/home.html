@@ -1,0 +1,188 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulseSense - Enter Sleep Data</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f0f8ff;
+            background-image: url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #333;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px; /* Add some padding to prevent content from sticking to edges */
+            box-sizing: border-box;
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 600px;
+            max-height: 600px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Professional shadow effect */
+            text-align: center;
+            overflow: auto; /* Ensure content does not overflow */
+        }
+
+        header h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.8rem;
+            color: #0288d1;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* Add spacing between input fields */
+            text-align: left;
+        }
+
+        form label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #444;
+        }
+
+        form input,
+        form button {
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        form input:focus {
+            border-color: #0288d1;
+            outline: none;
+        }
+
+        form button {
+            background-color: #0288d1;
+            color: white;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        form button:hover {
+            background-color: #005f9e;
+            transform: scale(1.05);
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #0288d1;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #005f9e;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem; /* Smaller title font for mobile */
+            }
+
+            .main-container {
+                padding: 20px; /* Reduced padding for smaller screens */
+                max-width: 90%; /* Use more available space */
+            }
+
+            form {
+                gap: 15px; /* Reduce the space between fields */
+            }
+
+            form input, form button {
+                font-size: 0.9rem; /* Smaller input/button font */
+            }
+
+            form button {
+                padding: 12px; /* Increase button size for mobile */
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8rem; /* Even smaller title font */
+            }
+
+            .main-container {
+                padding: 15px;
+                max-width: 95%; /* More space for small screens */
+            }
+
+            form {
+                gap: 12px;
+            }
+
+            form input, form button {
+                font-size: 0.85rem; /* Further reduce font size */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <h1>Enter Your Sleep Data</h1>
+        </header>
+        <form method="post">
+            {% csrf_token %}
+            <label for="heart_rate">Heart Rate (BPM):</label>
+            <input type="number" name="heart_rate" required>
+
+            <label for="body_movements">Body Movements:</label>
+            <input type="number" name="body_movements" required>
+
+            <label for="respiratory_rate">Respiratory Rate (Breaths/min):</label>
+            <input type="number" name="respiratory_rate" required>
+
+            <label for="eeg_data">EEG Data:</label>
+            <input type="number" name="eeg_data" required>
+
+            <label for="sleeping_hours">Sleeping Hours:</label>
+            <input type="number" name="sleeping_hours" required>
+
+            <label for="blood_oxygen_level">Blood Oxygen Level (%):</label>
+            <input type="number" name="blood_oxygen_level" required>
+
+            <label for="snoring_rate">Snoring Rate:</label>
+            <input type="number" name="snoring_rate" required>
+
+            <label for="limb_movement_rate">Limb Movement Rate:</label>
+            <input type="number" name="limb_movement_rate" required>
+
+            <button type="submit">Predict Stress Level</button>
+        </form>
+
+    </div>
+</body>
+</html>
